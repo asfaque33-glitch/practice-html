@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ABOUT HTML API</title>
+  </head>
+  <body>
+    <h1 style="text-align: center;">About HTML API</h1>
+    <h2>HTML Geolocation API</h2>
+    <p>click the button to get coordinates</p>
+    <button onclick="getloc()">fetch location</button>
+    <p id="coordinates"></p>
+    <!-- <strong> </strong> -->
+    <script>
+    const x= document.getElementById("coordinates");
+    function getloc(){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(sucessful, error);
+        }else{
+            x.innerHTML="Geolocation is not supported by this browser.";
+        }
+    }
+    function sucessful(position){
+        x.innerHTML="Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+    }
+    function error(){
+       alert("Unable to retrieve your location");
+    }
+    </script>
+  </body>   
+</html>
+
+      
