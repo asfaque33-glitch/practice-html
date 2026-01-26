@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LEarning about HTML APIs</title>
+    <style>
+      #div1 {
+        width: 350px;
+        height: 70px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">learning about HTML APIs</h1>
+    <h2>HTML Geolocation</h2>
+    <p>Click the button to get your coordinates.</p>
+    <button onclick="getloc()">Fetch location</button>
+    <p id="Coordinates"></p>
+    <!-- <strong></strong> -->
+    <script>
+      const x = document.getElementById("Coordinates");
+      function getloc() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(success, error);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+      function success(position) {
+        x.innerHTML =
+          "Latitude:" +
+          position.coords.latitude +
+          "<br>Longitude:" +
+          position.coords.longitude;
+      }
+      function error() {
+        alert("Sorry, no position available.");
+      }
+    </script>
+
+    <h2>Drag and Drop</h2>
+    <p>Drag the w3 school image in rectangle</p>
+    <div id="div1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
+<br>
+<img id="img1" src="/images/logo.jpg" draggable="true" ondragstart="dragstartHandler(event)" width="336" height="69">
+<script>
+      function dragstartHandler(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function dragoverHandler(ev) {
+  ev.preventDefault();
+}
+function dropHandler(ev) {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+    </script>
+  </body>
+</html>
