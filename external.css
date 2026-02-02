@@ -1,0 +1,23 @@
+body{
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url("/images/trophy.jpg")  ;
+    /* background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+     
+} */
+h1{
+    color:rgb(27, 190, 196);
+    text-align: center;
+    background-color: rgb(0, 162, 255);
+    opacity: 0.9;
+    background-image: url("/images/rohit.jpg");
+    /* width: 300px; */
+    height: 150px;  
+}
+p{
+    text-align: center;
+    color: blue;
+    background-color: lightgrey;
+    opacity: 0.8;
+}
