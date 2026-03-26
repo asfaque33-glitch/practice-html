@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Variables</h1>
+
+<p>Javascript variables.</p>
+
+<p id="demo"></p>
+
+<script>
+// let x = 5;
+// let y = 6;
+// let z = x + y;
+const cars=[ "Volvo", "BMW", "Audi", "Mercedes", "Opel"];
+let text = "";
+for (let i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+}
+document.getElementById("demo").innerHTML = "The value of cars is " + text;
+</script>
+
+</body>
+</html>

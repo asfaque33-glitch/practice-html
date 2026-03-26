@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Parking System Prototype</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+
+  <header>
+    <h1>Smart Parking System Prototype</h1>
+  </header>
+
+  <section class="dashboard">
+    <p>Total Slots: <span id="totalSlots">20</span> | Available: <span id="availableSlots">20</span> | Occupied: <span id="occupiedSlots">0</span></p>
+    <p>Available Slots: <span id="availableList">All</span></p>
+    <p>Occupied Slots: <span id="occupiedList">None</span></p>
+  </section>
+
+  <section class="parking-grid" id="parkingGrid">
+    <!-- Slots generated dynamically in JS -->
+  </section>
+
+  <section class="camera-view">
+    <h3>Camera View (Optional)</h3>
+    <img src="https://via.placeholder.com/400x200?text=Camera+View" alt="Camera View">
+    <p style="font-size:12px;">Represents advanced camera-based system</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

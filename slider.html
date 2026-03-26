@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Slider Example</title>
+    <style>
+        .slider-container {
+            width: 300px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        input[type="range"] {
+            width: 100%;
+        }
+        .value-display {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" name="volume" min="0" max="100" value="50">
+        <div class="value-display">Value: <span id="volume-value">50</span></div>
+    </div>
+
+    <script>
+        const volumeSlider = document.getElementById('volume');
+        const volumeValue = document.getElementById('volume-value');
+
+        volumeSlider.addEventListener('input', function() {
+            volumeValue.textContent = this.value;
+        });
+    </script>
+</body>
+</html>
